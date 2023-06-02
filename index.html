@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sách Duy Vũ</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Asap:wght@100&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <style>
+        .container {
+        width: auto;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 100px 48px 720px 1650px 500px;
+        grid-template-areas: 
+            'head'
+            'menu'
+            'qc'
+            'content'
+            'footer';
+    }
+ 
+    .i1{
+        grid-area: head;
+        padding-left: 10px;
+
+    }
+    .i2{
+        grid-area: menu;
+        background-color: rgb(250, 249, 246);
+    }
+    .i3{
+        grid-area: qc;
+        background-color: #fefffe;
+        padding:0 15px;
+    }
+    .i4{
+        grid-area: content;
+    }
+    .i4 .chinhtrang{
+      padding-top: 35px;
+    }
+    .i5{
+        grid-area: footer;
+    }
+    .i1 img{
+        height: 100px;
+        width: 100px;
+        float: left;
+    }
+    .container .i1 form{
+        float: left;
+        padding-top: 30px;
+        width: 550px;
+        padding-left: 80px;
+        line-height: 100px;
+    }
+    .container .i1 ul li {
+        text-decoration: none;
+        position: relative;
+        list-style-type: none;
+    }
+    .container .i1 ul li a{
+        float: left;
+        text-align: center;
+        padding-left: 70px;
+        line-height: 100px;
+        text-decoration: none;
+        color: black;
+    }
+    .container .i1 ul li img{
+        float: left;
+        text-align: center;
+        margin-top: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    .container .i1 ul li a:hover{
+        color: red;
+    }
+    .user button{
+        margin-top: 8px;
+        margin-right: 40px;
+        float: right;
+    }
+    .i2 ul li a{
+        color: black;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    .i4 h2{
+        margin-top: 20px;
+        padding-left: 13px;
+    }
+    .i4 .dmsanpham{
+        padding: 15px;
+    }
+    .i4 .dmsanpham a{
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .i5{
+        background-color: black;
+    }
+    .i5 .gioithieu{
+        float: left;
+    }
+    .i5 img{
+        margin-left: 90px;
+        padding: 30px;
+    }
+    .i5 .gioithieu p{
+        margin-left: 40px;
+    }
+    .i5 .gioithieu ul li{
+        margin-left: 45px;
+        color: whitesmoke;
+    }
+    .i5 .gioithieusp {
+        float: left;
+        margin-top: 80px;
+        padding-left: 80px;
+        color: whitesmoke;
+    }
+    .i5 .gioithieusp ul li {
+        border-bottom: 1px solid white;
+        position: relative;
+        padding: 0 15px;
+        list-style-type:decimal;
+        height: 40px;
+      
+    }
+    .i5 ul li a{
+        text-decoration:none;
+        color: whitesmoke;
+    }
+    .i5 ul li a:hover{
+        color: rgb(136, 122, 122);
+    }
+    .i5 .ChinhSach {
+        float: left;
+        margin-top: 80px;
+        padding-left: 80px;
+        color: whitesmoke;
+    }
+    .i5 .ChinhSach ul li {
+        border-bottom: 1px solid white;
+        position: relative;
+        padding: 0 15px;
+        list-style-type:decimal;
+        height: 40px;
+      
+    }
+    .i5 .vechungtoi {
+        float: left;
+        margin-top: 80px;
+        padding-left: 80px;
+        color: whitesmoke;
+    }
+    .i5 .vechungtoi ul li {
+        border-bottom: 1px solid white;
+        position: relative;
+        padding: 0 15px;
+        list-style-type:decimal;
+        height: 40px;
+      
+    }
+    .cart{
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .cart h2{
+        margin-bottom: 20px;
+    }
+    .cart table{
+        width: 100%;
+    }
+    .cart table thead tr th:first-child{
+        text-align: left;
+    }
+    .cart table tr td{
+        border-bottom: 1px solid #f3eded;
+        padding: 12px 0;  
+      }
+    .cart {
+        position: fixed;
+        height: 100vh;
+        width: 500px;
+        right: 0;
+        top: 0;
+        background-color: #ddd;
+        padding: 12px 20px;
+        overflow-y: scroll;
+        right: -100%;
+    }
+    .cart i{
+        cursor: pointer;
+        float: left;
+    }
+    #toggle{
+            display: none;
+            text-align: right;
+            padding: 10px;
+            font-size: 30px;
+            cursor: pointer;
+           }
+    @media screen and (max-width: 800px)
+        {
+            .container{
+                width: 800px;
+                height: 1600px;
+                margin: auto;
+                display: grid;
+            grid-template-columns: 800px 230px;
+            grid-template-rows:200px auto auto ;
+            grid-template-areas: 
+            'head menu'
+            'content content'
+            'footer footer';
+            }
+            .cart {
+            position: fixed;
+            height: 1000vh;
+            width: 100%;
+            right: 0;
+            top: 0;
+            background-color: #ddd;
+            padding: 12px 20px;
+            overflow-y: scroll;
+            right: -100%;
+            font-size: 20px;
+            }
+            .i2{
+              background-color: white;
+            }
+           .i2 .nav{
+            padding-top: 60px;
+            flex-direction:column;
+            text-align: left;
+            display: none;
+           }
+           .i5 .vechungtoi{
+            display: block;
+            text-align: center;
+            padding-left: 365px;
+            padding-bottom: 60px;
+           }
+           #toggle{
+            margin-top: 50px;
+            display: block;
+            float: right;
+          
+           }
+           .i1 img{
+            height: 200px;
+            width: 200px;
+            float: left;
+           }
+           .container .i1 form{
+            float: left;
+            padding-top: 60px;
+            width: 350px; 
+            line-height: 100px;
+          }
+          
+          .container .i1 ul li {
+            text-decoration: none;
+            position: relative;
+            list-style-type: none;
+          }
+          .container .i1 ul li a{
+          float: left;
+          text-align: center;
+          padding-left: 70px;
+          line-height: 100px;
+          margin-top: 35px;
+          text-decoration: none;
+          color: black;
+          margin-right: 20px;
+           }
+           .container .i1 .user{
+            margin-right: 60px;
+           }
+    .container .i1 ul li img{
+        float: left;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+    }
+        }
+    </style>
+    <script>
+      $(document).ready(function() {
+          $('#toggle').click(function() { 
+              $('.i2 .nav').slideToggle();
+          });
+      })
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="i1">
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <ul>
+                <li>
+                    <a href="#"><img style="height: 50px; width: 50px;" src="img/cart.jpg" alt=""></a>
+                </li>
+            </ul>
+            <div class="user">
+               <a href="Dang ky.html"> <button type="button" class="btn btn-secondary btn-lg">Đăng Ký</button></a>
+               <a href="Dang Nhap.html"> <button type="button" class="btn btn-secondary btn-lg">Đăng Nhập</button></a>
+            </div>
+            
+        </div>
+        <div class="i2">
+            <div id="toggle">
+              <i class="fas fa-bars" style="color: #1e3152;"></i>
+              </div>
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="gioithieu.html">Giới Thiệu</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Sản Phẩm Sách</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="dmsachkinhdoanh.html">Sách Trinh Thám</a></li>
+                    <li><a class="dropdown-item" href="dmsachkinhdoanh.html">Sách Tài Chính</a></li>
+                    <li><a class="dropdown-item" href="dmsachkinhdoanh.html">Sách Kinh Doanh</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ChinhSach.html">Chính Sách</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gioithieu.html">Liên Hệ</a>
+                </li>
+              </ul>
+        </div>
+        <div class="i3">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/sach2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/sach1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://file.hstatic.net/200000488629/collection/baner_sach_sale_off-06_18bce6130a904758abf0cabfba15a359.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="i4">
+            <h2 style="color: red;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight: bold;">MỚI CẬP NHẬT</h2>
+        
+            <div class="dmsanpham">
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col">
+                      <div class="card h-100">
+                        <a href="chitietsanpham2.html"><img src="img/10-phut-tinh-tam.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 style="text-align: center;color: red; opacity: 30%;"  class="card-title">SÁCH VĂN HỌC</h5>
+                          <p style="text-align: center;"  class="card-text">10 Phút Tĩnh Tâm – 71 Thói Quen Cân Bằng Cuộc Sống Hiện Đại</p>
+                          <p style="text-align: center; font-size: 30px; font-weight: bold; color: red;"  class="card-text">139.000 đ</p>
+                        </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <a href="chitietsanpham2.html"><img src="img/100-loi-khuyen-bds.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 style="text-align: center;color: red; opacity: 30%;"  class="card-title">SÁCH BẤT ĐỘNG SẢN</h5>
+                          <p style="text-align: center;"  class="card-text">100 Lời Khuyên Đầu Tư Bất Động Sản Khôn Ngoan Nhất</p>
+                          <p style="text-align: center; font-size: 30px; font-weight: bold; color: red;"  class="card-text">126.000 đ</p>
+                        </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <a href="chitietsanpham2.html"><img src="img/101-cau-hoi-giai-dap-bds-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 style="text-align: center;color: red; opacity: 30%;" class="card-title">SÁCH BẤT ĐỘNG SẢN</h5>
+                          <p style="text-align: center;"  class="card-text">101 Câu Hỏi Và Giải Đáp Mua Bán Bất Động Sản – Phạm Văn Nam</p>
+                          <p style="text-align: center; font-size: 30px; font-weight: bold; color: red;"  class="card-text">137.000 đ</p></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <a href="chitietsanpham2.html"><img src="img/sach-payback-time-ngay-doi-no-1-2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 style="text-align: center; color: red; opacity: 30%;" class="card-title">SÁCH CHỨNG KHOÁN</h5>
+                          <p style="text-align: center;"  class="card-text">Ngày Đòi Nợ – Payback Time; tác giả Phil Town</p>
+                          <p style="text-align: center; font-size: 30px; font-weight: bold; color: red;"  class="card-text">205.000 đ</p></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                          <a href="chitietsanpham2.html"><img src="img/com-bo-2-cuon-sach-canh-tranh.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 style="text-align: center;color: red; opacity: 30%;" class="card-title">COMBO SÁCH HAY</h5>
+                            <p style="text-align: center;"  class="card-text">Bộ 2 Quyển Chiến Lược + Lợi Thế Cạnh Tranh</p>
+                            <p style="text-align: center; font-size: 30px; font-weight: bold; color: red;"  class="card-text">280.000 đ</p></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <a href="chitietsanpham2.html"><img src="img/cong-thuc-tiktok.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 style="text-align: center;color: red; opacity: 30%;" class="card-title">SÁCH MARKETING</h5>
+                            <p style="text-align: center;"  class="card-text">Công Thức TikTok Ads 1000 Đơn</p> <br>
+                            <p style="text-align: center; font-size: 30px; font-weight: bold; color: red;"  class="card-text">175.000 đ</p></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <a href="chitietsanpham2.html"><img src="img/marketing-can-ban-1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 style="text-align: center;color: red; opacity: 30%;" class="card-title">SÁCH MARKETING</h5>
+                            <p style="text-align: center;"  class="card-text">Marketing Căn Bản</p> <br>
+                            <p style="text-align: center; font-size: 30px; font-weight: bold; color: red;"  class="card-text">135.000 đ</p></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <a href="chitietsanpham2.html"><img src="img/marketing-cho-ban-le-tac-gia-susan-negen-bob-negen.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 style="text-align: center;color: red; opacity: 30%;" class="card-title">SÁCH MARKETING</h5>
+                            <p style="text-align: center;"  class="card-text">Marketing cho bán lẻ; Tác giả Susan Negen, Bob Negen</p>
+                            <p style="text-align: center; font-size: 30px; font-weight: bold; color: red;"  class="card-text">115.000 đ</p></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <a href="chitietsanpham2.html"><img src="img/101-cau-hoi-giai-dap-bds-1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 style="text-align: center;color: red; opacity: 30%;" class="card-title">SÁCH BẤT ĐỘNG SẢN</h5>
+                            <p style="text-align: center;"  class="card-text">101 Câu Hỏi Và Giải Đáp Mua Bán Bất Động Sản – Phạm Văn Nam</p>
+                            <p style="text-align: center; font-size: 30px; font-weight: bold; color: red;"  class="card-text">137.000 đ</p></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <a href="chitietsanpham2.html"><img src="img/101-cau-hoi-giai-dap-bds-1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 style="text-align: center;color: red; opacity: 30%;" class="card-title">SÁCH BẤT ĐỘNG SẢN</h5>
+                            <p style="text-align: center;"  class="card-text">101 Câu Hỏi Và Giải Đáp Mua Bán Bất Động Sản – Phạm Văn Nam</p>
+                            <p style="text-align: center; font-size: 30px; font-weight: bold; color: red;"  class="card-text">137.000 đ</p></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <a href="chitietsanpham2.html"><img src="img/101-cau-hoi-giai-dap-bds-1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 style="text-align: center;color: red; opacity: 30%;" class="card-title">SÁCH BẤT ĐỘNG SẢN</h5>
+                            <p style="text-align: center;"  class="card-text">101 Câu Hỏi Và Giải Đáp Mua Bán Bất Động Sản – Phạm Văn Nam</p>
+                            <p style="text-align: center; font-size: 30px; font-weight: bold; color: red;"  class="card-text">137.000 đ</p></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <a href="chitietsanpham2.html"><img src="img/101-cau-hoi-giai-dap-bds-1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 style="text-align: center;color: red; opacity: 30%;" class="card-title">SÁCH BẤT ĐỘNG SẢN</h5>
+                            <p style="text-align: center;"  class="card-text">101 Câu Hỏi Và Giải Đáp Mua Bán Bất Động Sản – Phạm Văn Nam</p>
+                            <p style="text-align: center; font-size: 30px; font-weight: bold; color: red;"  class="card-text">137.000 đ</p></a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="chinhtrang">
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+                        <li class="page-item"><a class="page-link" href="index 2.html">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+            </div>
+            <section class="cart">
+              <i class="fa-solid fa-x"></i>
+              <h2>Cart</h2>
+              <form action="">
+                  <table>
+                          <thead>
+                              <tr>
+                                  <th>Sản phẩm</th>
+                                  <th>Giá</th>
+                                  <th>SL</th>
+                                  <th>Chọn</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td style="display: flex; align-items: center;"><img style="width: 70px;" src="img/10-phut-tinh-tam.jpg" alt="">10 Phút Tĩnh Tâm</td>
+                                  <td><p style="margin-top: 20px; font-size: 16px;"><span>150.000</span><sup>đ</sup></p></td>
+                                  <td><input style="width: 30px; outline: none;" type="number" value="1" min="1"></td>
+                                  <td style="cursor: pointer;">Xóa</td>
+                              </tr>
+                          </tbody>
+                  </table>
+                  <div style="text-align: right;" class="price-total">
+                      <p style="font-weight: bold;">Tổng tiền: <span style="color: red; font-size: 20px;">150.000</span><sup>đ</sup></p>
+                  </div>
+                  <button type="button" class="btn btn-danger" style="font-size: 18px; font-weight: bold;">Thanh Toán</button>
+              </form>
+          </section>
+        </div>
+        <div class="i5">
+            <div class="gioithieu">
+                <a href="index.html"><img style="height: 200px; width: 200px;" src="img/logokovien.png" alt="logo"></a>
+                <p style="color: whitesmoke;">Nhà sách Duy Vũ - Nhà Sách Online. Hỗ trợ <br> giao sách và thu tiền COD tại nhà</p> <br>
+                <ul>
+                    <li>Địa Chỉ : 26 Phú Thọ Hòa, P.Phú Thọ Hòa <br>, Q.Tân Phú</li>
+                    <li>Hotline : 078.5254.352</li>
+                    <li>Email   : vudd26841@gmail.com</li>
+                </ul>
+            </div>
+            <div class="gioithieusp">
+                <p style="font-size: 20px;">Sản phẩm và Danh mục</p>
+                <ul>
+                    <li><a href="dmsachkinhdoanh.html">Sách Trinh Thám</a></li> <br>
+                    <li><a href="dmsachkinhdoanh.html">Sách Tài Chính</a></li> <br>
+                    <li><a href="dmsachkinhdoanh.html">Sách Kinh Doanh</a></li> 
+                </ul>
+            </div>
+            <div class="ChinhSach">
+                <p style="font-size: 20px;">Chính Sách và Điều khoản</p>
+                <ul>
+                    <li><a href="ChinhSach.html">Chính sách đổi trả</a></li> <br>
+                    <li><a href="ChinhSach.html">Chính sách vận chuyển</a></li> <br>
+                    <li><a href="ChinhSach.html">Chính sách hoàn tiền</a></li> <br>
+                    <li><a href="ChinhSach.html">Điều khoản và điều kiện</a></li> 
+                </ul>
+            </div>
+            <div class="vechungtoi">
+                <p style="font-size: 20px;">Về Chúng Tôi</p>
+                <ul>
+                    <li><a href="gioithieu.html">Giới thiệu</a></li> <br>
+                    <li><a href="gioithieu.html">Khuyến mãi</a></li> <br>
+                    <li><a href="gioithieu.html">Liên hệ</a></li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
